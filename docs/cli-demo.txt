@@ -1,0 +1,20 @@
+$ node src/cli.js add "Belajar JavaScript" --priority high --due 2026-10-25
+Ditambahkan: [ ] #1 Belajar JavaScript - high (tenggat 2026-10-25)
+$ node src/cli.js add "Kerjakan laporan PABWE" --priority medium
+Ditambahkan: [ ] #2 Kerjakan laporan PABWE - medium
+$ node src/cli.js add "Bersihkan kamar" --priority low
+Ditambahkan: [ ] #3 Bersihkan kamar - low
+$ node src/cli.js done 1
+Selesai: [x] #1 Belajar JavaScript - high (tenggat 2026-10-25)
+$ node src/cli.js remove 2
+Tugas #2 dihapus.
+$ node src/cli.js add "Review kode" --priority high
+Ditambahkan: [ ] #4 Review kode - high
+$ node src/cli.js list --sort priority
+[x] #1 Belajar JavaScript - high (tenggat 2026-10-25)
+[ ] #4 Review kode - high
+[ ] #3 Bersihkan kamar - low
+$ node src/cli.js add "Salah" --due 2026-13-45
+Error: Format tanggal harus YYYY-MM-DD dan tanggalnya harus valid.
+$ node src/cli.js done 99
+Error: Tugas dengan id 99 tidak ditemukan.
