@@ -1,0 +1,188 @@
+TAP version 13
+# Subtest: add: menambah tugas dengan nilai default
+ok 1 - add: menambah tugas dengan nilai default
+  ---
+  duration_ms: 2.359407
+  type: 'test'
+  ...
+# Subtest: add: judul kosong ditolak
+not ok 2 - add: judul kosong ditolak
+  ---
+  duration_ms: 1.427845
+  type: 'test'
+  location: '/tmp/work/task-manager-ai/test/taskManager.test.js:13:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (/tmp/work/task-manager-ai/test/taskManager.test.js:15:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: add: prioritas tidak valid ditolak
+not ok 3 - add: prioritas tidak valid ditolak
+  ---
+  duration_ms: 0.489724
+  type: 'test'
+  location: '/tmp/work/task-manager-ai/test/taskManager.test.js:18:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (/tmp/work/task-manager-ai/test/taskManager.test.js:20:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: add: tanggal tenggat tidak valid ditolak
+not ok 4 - add: tanggal tenggat tidak valid ditolak
+  ---
+  duration_ms: 0.32825
+  type: 'test'
+  location: '/tmp/work/task-manager-ai/test/taskManager.test.js:23:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (/tmp/work/task-manager-ai/test/taskManager.test.js:25:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: id tetap unik setelah ada tugas yang dihapus
+not ok 5 - id tetap unik setelah ada tugas yang dihapus
+  ---
+  duration_ms: 0.984862
+  type: 'test'
+  location: '/tmp/work/task-manager-ai/test/taskManager.test.js:28:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    1 !== 2
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 2
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/tmp/work/task-manager-ai/test/taskManager.test.js:35:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: complete: id tidak ditemukan melempar error yang jelas
+not ok 6 - complete: id tidak ditemukan melempar error yang jelas
+  ---
+  duration_ms: 0.8114
+  type: 'test'
+  location: '/tmp/work/task-manager-ai/test/taskManager.test.js:39:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /tidak ditemukan/i. Input:
+    
+    "TypeError: Cannot set properties of undefined (setting 'done')"
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+  error: "Cannot set properties of undefined (setting 'done')"
+  name: 'TypeError'
+  stack: |-
+    TaskManager.complete (/tmp/work/task-manager-ai/src/taskManager.js:22:15)
+    /tmp/work/task-manager-ai/test/taskManager.test.js:41:26
+    getActual (node:assert:609:5)
+    Function.throws (node:assert:757:24)
+    TestContext.<anonymous> (/tmp/work/task-manager-ai/test/taskManager.test.js:41:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (/tmp/work/task-manager-ai/test/taskManager.test.js:41:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: list: filter status done dan pending
+ok 7 - list: filter status done dan pending
+  ---
+  duration_ms: 0.48388
+  type: 'test'
+  ...
+# Subtest: list: urut prioritas high -> medium -> low
+not ok 8 - list: urut prioritas high -> medium -> low
+  ---
+  duration_ms: 33.04761
+  type: 'test'
+  location: '/tmp/work/task-manager-ai/test/taskManager.test.js:53:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        'high',
+    +   'low',
+        'medium',
+    -   'low'
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'high'
+    1: 'medium'
+    2: 'low'
+  actual:
+    0: 'high'
+    1: 'low'
+    2: 'medium'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (/tmp/work/task-manager-ai/test/taskManager.test.js:59:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 2
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 189.214156
